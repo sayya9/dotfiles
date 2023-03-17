@@ -1,0 +1,33 @@
+# Aliases and functions
+alias ssh='LANG=en_US.UTF-8 ssh -o "XAuthLocation=/opt/X11/bin/xauth" -A'
+alias ls='ls -Fh'
+
+# Export LSCOLORS environment
+export CLICOLOR='true'
+export LSCOLORS="gxfxcxdxcxegedabagacad"
+
+# This will set your window title
+export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
+
+source ~/.iterm2_shell_integration.`basename $SHELL`
+
+# This creates the var currentDir to use later on
+function iterm2_print_user_vars() {
+  iterm2_set_user_var currentDir $(echo ${PWD##*/})
+}
+
+# Vagrant bash autocomplete on OSX
+if [ -f `brew --prefix`/etc/bash_completion.d/vagrant ]; then
+    source `brew --prefix`/etc/bash_completion.d/vagrant
+fi
+
+# Add git bash-completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
+
+# Set go env
+export GOPATH=~/go
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
