@@ -6,15 +6,6 @@ elif [ `uname` == 'Linux' ]; then
     source ~/.linuxrc
 fi
 
-# Source Cloud SDK tools
-if [ -f "/Users/andrew/opt/google-cloud-sdk/completion.bash.inc" ]; then
-    # Enable shell command completion for gcloud
-    . /Users/andrew/opt/google-cloud-sdk/completion.bash.inc
-
-    # Add the Google Cloud SDK command line tools
-    . /Users/andrew/opt/google-cloud-sdk/path.bash.inc
-fi
-
 # Source global definitions
 if [ -x /etc/bashrc ]; then
     . /etc/bashrc
