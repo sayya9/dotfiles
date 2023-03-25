@@ -25,8 +25,13 @@ alias mawork='cd ~/github/work'
 alias mapersonal='cd ~/github/personal'
 
 # AWS PROFILE AWS_PROFILE, AWS_DEFAULT_PROFILE
-alias madev="export AWS_DEFAULT_PROFILE=dev"
-alias maprod="export AWS_DEFAULT_PROFILE=prod"
+alias maawsdev="export AWS_DEFAULT_PROFILE=dev"
+alias maawsprod="export AWS_DEFAULT_PROFILE=prod"
+
+# GCP PROFILE CLOUDSDK_ACTIVE_CONFIG_NAME
+alias magcpdev="export CLOUDSDK_ACTIVE_CONFIG_NAME=dev"
+alias magcpdev="export CLOUDSDK_ACTIVE_CONFIG_NAME=demo"
+alias magcpdev="export CLOUDSDK_ACTIVE_CONFIG_NAME=prod"
 
 svim () {
     sudo vim -u ~andrew/.vimrc $@
