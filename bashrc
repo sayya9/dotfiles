@@ -22,7 +22,7 @@ alias s='sudo'
 alias sw='sudo su -'
 alias grep='grep --color'
 alias mawork='cd ~/github/work'
-alias mapersonal='cd ~/github/personal'
+alias personal='cd ~/github/personal'
 
 # AWS PROFILE AWS_PROFILE, AWS_DEFAULT_PROFILE
 alias maawsdev="export AWS_DEFAULT_PROFILE=dev"
@@ -32,10 +32,6 @@ alias maawsprod="export AWS_DEFAULT_PROFILE=prod"
 alias magcpdev="export CLOUDSDK_ACTIVE_CONFIG_NAME=dev"
 alias magcpdev="export CLOUDSDK_ACTIVE_CONFIG_NAME=demo"
 alias magcpdev="export CLOUDSDK_ACTIVE_CONFIG_NAME=prod"
-
-svim () {
-    sudo vim -u ~andrew/.vimrc $@
-}
 
 # bash completion
 [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
