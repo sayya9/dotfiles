@@ -30,8 +30,8 @@ alias maawsprod="export AWS_DEFAULT_PROFILE=prod"
 
 # GCP PROFILE CLOUDSDK_ACTIVE_CONFIG_NAME
 alias magcpdev="export CLOUDSDK_ACTIVE_CONFIG_NAME=dev"
-alias magcpdev="export CLOUDSDK_ACTIVE_CONFIG_NAME=demo"
-alias magcpdev="export CLOUDSDK_ACTIVE_CONFIG_NAME=prod"
+alias magcpdemo="export CLOUDSDK_ACTIVE_CONFIG_NAME=demo"
+alias magcpprod="export CLOUDSDK_ACTIVE_CONFIG_NAME=prod"
 
 # bash completion
 [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
