@@ -166,6 +166,9 @@ let g:mkdp_filetypes = ['markdown']
 " By default the theme is define according to the preferences of the system
 let g:mkdp_theme = 'light'
 
+" preservim/nerdtree
+let NERDTreeShowHidden=1
+
 " preservim/vim-markdown
 autocmd FileType markdown let b:sleuth_autoatic=0
 autocmd FileType markdown set conceallevel=0

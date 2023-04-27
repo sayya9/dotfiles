@@ -22,7 +22,7 @@ Plug 'chase/vim-ansible-yaml'
 Plug 'hashivim/vim-terraform'
 
 " File system explorer
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdtree'
 
 " Markdown
 Plug 'godlygeek/tabular'
