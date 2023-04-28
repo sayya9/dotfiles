@@ -44,10 +44,13 @@ for x in kubectl helm; do
     fi
 done
 
-# Enable aws command completion
+# aws command completion
 if which aws_completer > /dev/null 2>&1; then
     complete -C '/usr/local/bin/aws_completer' aws
 fi
+
+# gh completion
+eval "$(gh completion -s bash)"
 
 # Enable ssh-agent
 SSH_ENV="$HOME/.ssh/environment"
