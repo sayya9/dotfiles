@@ -21,20 +21,15 @@ export GOPATH=~/go
 alias s='sudo'
 alias sw='sudo su -'
 alias grep='grep --color'
-alias mawork='cd ~/github/work'
-alias personal='cd ~/github/personal'
 
-# AWS PROFILE AWS_PROFILE, AWS_DEFAULT_PROFILE
-alias maawsdev="export AWS_DEFAULT_PROFILE=dev"
-alias maawsprod="export AWS_DEFAULT_PROFILE=prod"
+# Completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
 
-# GCP PROFILE CLOUDSDK_ACTIVE_CONFIG_NAME
-alias magcpdev="export CLOUDSDK_ACTIVE_CONFIG_NAME=dev"
-alias magcpdemo="export CLOUDSDK_ACTIVE_CONFIG_NAME=demo"
-alias magcpprod="export CLOUDSDK_ACTIVE_CONFIG_NAME=prod"
-
-# bash completion
-[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
+if [ -f $(brew --prefix)/etc/bash_completion.d/git-completion.bash ]; then
+  . $(brew --prefix)/etc/bash_completion.d/git-completion.bash
+fi
 
 # kubectl and helm autocompletion
 for x in kubectl helm; do
@@ -50,7 +45,9 @@ if which aws_completer > /dev/null 2>&1; then
 fi
 
 # gh completion
-eval "$(gh completion -s bash)"
+if which gh > /dev/null 2>&1; then
+    eval "$(gh completion -s bash)"
+fi
 
 # Enable ssh-agent
 SSH_ENV="$HOME/.ssh/environment"
