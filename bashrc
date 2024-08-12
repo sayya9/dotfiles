@@ -23,9 +23,7 @@ alias sw='sudo su -'
 alias grep='grep --color'
 
 # Completion
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
-fi
+eval "$(docker completion bash)"
 
 if [ -f $(brew --prefix)/etc/bash_completion.d/git-completion.bash ]; then
   . $(brew --prefix)/etc/bash_completion.d/git-completion.bash
