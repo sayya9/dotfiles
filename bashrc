@@ -22,9 +22,10 @@ alias s='sudo'
 alias sw='sudo su -'
 alias grep='grep --color'
 
-# Completion
+# docker completion
 eval "$(docker completion bash)"
 
+# git completion
 if [ -f $(brew --prefix)/etc/bash_completion.d/git-completion.bash ]; then
   . $(brew --prefix)/etc/bash_completion.d/git-completion.bash
 fi
@@ -46,6 +47,9 @@ fi
 if which gh > /dev/null 2>&1; then
     eval "$(gh completion -s bash)"
 fi
+
+# brew completion
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Enable ssh-agent
 SSH_ENV="$HOME/.ssh/environment"
