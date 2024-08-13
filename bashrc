@@ -51,6 +51,10 @@ fi
 # brew completion
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# vagrant completion
+# vagrant autocomplete install --bash
+. /opt/vagrant/embedded/gems/gems/vagrant-2.4.1/contrib/bash/completion.sh
+
 # Enable ssh-agent
 SSH_ENV="$HOME/.ssh/environment"
 
@@ -75,3 +79,4 @@ else
         start_agent;
     fi
 fi
+
