@@ -55,6 +55,9 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # vagrant autocomplete install --bash
 . /opt/vagrant/embedded/gems/gems/vagrant-2.4.1/contrib/bash/completion.sh
 
+# tmux completion
+. ~/.tmux-bash-completion.bash
+
 # Enable ssh-agent
 SSH_ENV="$HOME/.ssh/environment"
 
@@ -79,4 +82,3 @@ else
         start_agent;
     fi
 fi
-
