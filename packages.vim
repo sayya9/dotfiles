@@ -38,5 +38,7 @@ Plug 'machakann/vim-highlightedyank'
 " Display the branch name in the statusline
 Plug 'itchyny/vim-gitbranch'
 
+Plug 'ycm-core/YouCompleteMe'
+
 " Initialize plugin system
 call plug#end()
