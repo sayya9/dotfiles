@@ -38,7 +38,8 @@ Plug 'machakann/vim-highlightedyank'
 " Display the branch name in the statusline
 Plug 'itchyny/vim-gitbranch'
 
-Plug 'ycm-core/YouCompleteMe'
+" Make vim as smart as VS Code
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Initialize plugin system
 call plug#end()

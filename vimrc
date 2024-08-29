@@ -194,3 +194,6 @@ let g:lightline = {
       \   'gitbranch': 'gitbranch#name'
       \ },
       \ }
+
+source ~/.vim/coc-config.vim
+source ~/.vim/coc-extensions.vim
