@@ -65,6 +65,7 @@ noremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 noremap <Leader>n nzz
 noremap <Leader>N Nzz
 map <C-n> :NERDTreeToggle<CR>
+nnoremap <C-e> :ExpandTabAndRetab<CR>
 
 " MarkdownPreview Config
 " set to 1, nvim will open the preview window after entering the markdown buffer
@@ -194,6 +195,15 @@ let g:lightline = {
       \   'gitbranch': 'gitbranch#name'
       \ },
       \ }
+
+" Functions
+function! SetExpandTabAndRetab()
+    set expandtab
+    retab
+endfunction
+
+" Commands
+command! ExpandTabAndRetab call SetExpandTabAndRetab()
 
 source ~/.vim/coc-config.vim
 source ~/.vim/coc-extensions.vim
