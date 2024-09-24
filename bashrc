@@ -25,11 +25,6 @@ alias grep='grep --color'
 # docker completion
 eval "$(docker completion bash)"
 
-# git completion
-if [ -f $(brew --prefix)/etc/bash_completion.d/git-completion.bash ]; then
-  . $(brew --prefix)/etc/bash_completion.d/git-completion.bash
-fi
-
 # kubectl and helm autocompletion
 for x in kubectl helm; do
     path=`which $x 2> /dev/null`
@@ -47,13 +42,6 @@ fi
 if which gh > /dev/null 2>&1; then
     eval "$(gh completion -s bash)"
 fi
-
-# brew completion
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-# vagrant completion
-# vagrant autocomplete install --bash
-. /opt/vagrant/embedded/gems/gems/vagrant-2.4.1/contrib/bash/completion.sh
 
 # tmux completion
 . ~/.tmux-bash-completion.bash
