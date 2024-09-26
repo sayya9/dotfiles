@@ -16,6 +16,7 @@ export EDITOR=vim
 export LANG=en_US.UTF-8
 export PATH=/opt/homebrew/bin:/opt/bin:$PATH
 export GOPATH=~/go
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 # Global aliases and functions
 alias s='sudo'
