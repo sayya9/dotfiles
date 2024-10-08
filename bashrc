@@ -1,9 +1,11 @@
 # .bashrc
 
-if [ `uname` == 'Darwin' ]; then
-    source ~/.macrc
-elif [ `uname` == 'Linux' ]; then
-    source ~/.linuxrc
+if [ -n "$PS1"  ]; then
+    if [ `uname` == 'Darwin' ]; then
+        source ~/.macrc
+    elif [ `uname` == 'Linux' ]; then
+        source ~/.linuxrc
+    fi
 fi
 
 # Source global definitions
