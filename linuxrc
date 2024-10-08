@@ -6,3 +6,6 @@ fi
 
 # Enables forwarding of the authentication agent connection 
 alias ssh='ssh -A'
+
+# Set up iTerm2 tab title
+echo -ne "\033]0;$(hostname -I | awk '{print $1}')\007"
