@@ -29,7 +29,7 @@ alias grep='grep --color'
 eval "$(docker completion bash)"
 
 # kubectl and helm autocompletion
-for x in kubectl helm; do
+for x in kubectl helm kustomize; do
     path=`which $x 2> /dev/null`
     if [ -f "$path" ]; then
         . <(${x} completion bash)
