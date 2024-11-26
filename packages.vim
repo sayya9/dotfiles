@@ -27,7 +27,7 @@ Plug 'preservim/nerdtree'
 " Markdown
 Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 " Dim paragraphs above and below the active paragraph
 Plug 'junegunn/limelight.vim'
