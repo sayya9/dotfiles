@@ -28,8 +28,38 @@ alias grep='grep --color'
 # docker completion
 eval "$(docker completion bash)"
 
-# kubectl and helm autocompletion
-for x in kubectl helm kustomize; do
+# Enable bash completion (needed for _filedir and other helper functions)
+if [ -f /opt/homebrew/etc/bash_completion ]; then
+    source /opt/homebrew/etc/bash_completion
+elif [ -f /usr/local/etc/bash_completion ]; then
+    source /usr/local/etc/bash_completion
+elif [ -f /etc/bash_completion ]; then
+    source /etc/bash_completion
+fi
+
+# --- Cilium & Hubble Bash Completion Setup ---
+if command -v brew >/dev/null 2>&1; then
+    completion_dir="$(brew --prefix)/etc/bash_completion.d"
+    mkdir -p "$completion_dir"
+
+    setup_completion() {
+        local cmd=$1
+        local file="$completion_dir/$cmd"
+        if command -v "$cmd" >/dev/null 2>&1; then
+            if [ ! -f "$file" ]; then
+                echo "Generating bash completion for $cmd..."
+                "$cmd" completion bash > "$file"
+            fi
+            [ -f "$file" ] && source "$file"
+        fi
+    }
+
+    setup_completion cilium
+    setup_completion hubble
+fi
+
+# autocompletion
+for x in kubectl helm cilium hubble; do
     path=`which $x 2> /dev/null`
     if [ -f "$path" ]; then
         . <(${x} completion bash)
