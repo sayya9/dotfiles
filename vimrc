@@ -66,6 +66,8 @@ noremap <Leader>n nzz
 noremap <Leader>N Nzz
 map <C-n> :NERDTreeToggle<CR>
 nnoremap <C-e> :ExpandTabAndRetab<CR>
+nnoremap <C-h> :vertical resize -2<CR>
+nnoremap <C-l> :vertical resize +2<CR>
 
 " MarkdownPreview Config
 " set to 1, nvim will open the preview window after entering the markdown buffer
