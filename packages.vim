@@ -41,5 +41,8 @@ Plug 'itchyny/vim-gitbranch'
 " Make vim as smart as VS Code
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" Highlight YAML keys and values for easier reading
+Plug 'Einenlum/yaml-revealer'
+
 " Initialize plugin system
 call plug#end()
