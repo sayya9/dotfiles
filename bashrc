@@ -37,7 +37,7 @@ elif [ -f /etc/bash_completion ]; then
     source /etc/bash_completion
 fi
 
-# --- Cilium & Hubble Bash Completion Setup ---
+# --- CLI Tools Bash Completion Setup ---
 if command -v brew >/dev/null 2>&1; then
     completion_dir="$(brew --prefix)/etc/bash_completion.d"
     mkdir -p "$completion_dir"
@@ -56,10 +56,11 @@ if command -v brew >/dev/null 2>&1; then
 
     setup_completion cilium
     setup_completion hubble
+    setup_completion istioctl
 fi
 
 # autocompletion
-for x in kubectl helm cilium hubble; do
+for x in kubectl helm cilium hubble istioctl; do
     path=`which $x 2> /dev/null`
     if [ -f "$path" ]; then
         . <(${x} completion bash)
