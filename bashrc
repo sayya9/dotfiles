@@ -69,7 +69,7 @@ done
 
 # aws command completion
 if which aws_completer > /dev/null 2>&1; then
-    complete -C '/usr/local/bin/aws_completer' aws
+    complete -C "$(which aws_completer)" aws
 fi
 
 # gh completion
