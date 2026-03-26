@@ -104,3 +104,8 @@ else
         start_agent;
     fi
 fi
+
+# Load local/private settings if they exist
+if [ -f ~/.bashrc.local ]; then
+    source ~/.bashrc.local
+fi
